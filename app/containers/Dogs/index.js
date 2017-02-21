@@ -22,10 +22,8 @@ export class Dogs extends React.PureComponent { // eslint-disable-line react/pre
             { name: 'description', content: 'Description of Dogs' },
           ]}
         />
-        <Col xs={9}>
-          <h1>I just love dogs so much.</h1>
-          <Image src="http://loremflickr.com/320/240/dog"></Image>
-        </Col>
+        <h1>I just love dogs so much.</h1>
+        <Image src="http://loremflickr.com/320/240/dog"></Image>
       </div>
     );
   }
