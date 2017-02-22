@@ -131,7 +131,22 @@ export default class Project extends React.Component{
 
   render()
   {
-    // should pull this out into the store
+    // should pull this out into the store.
+
+    // From Vy:
+    // On pulling information into the store:
+    // If you have a container that needs some initial properties, you can do this in the container's reducer.
+    // In your reducer, you can define some properties and set them to be the initial state of your container.
+    // Check out Brian's container/UserLogin/reducer.js as a good example on how to to this. He defines an
+    // initial state 'const initialState = {...}' and sets it in the reducer like so,
+    // 'function userLoginReducer(state = initialState, action){...}'.
+    //
+    // Note that this should only be done in containers. Components are dumb and have no knowledge of the store.
+    // Any information that a component needs should be passed directly into the component; they shouldn't be
+    // interacting with the store at all.
+    //
+    // Holla if that's confusing, it took a while for Brian to get me to understand this react/redux stuff!!
+
     const datasets = [
       {id: 'data 1',
         updated: 2052017,
