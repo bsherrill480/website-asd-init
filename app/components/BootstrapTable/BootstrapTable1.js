@@ -1,3 +1,19 @@
+/*
+ * General comments: (repeat from BootstrapTableViewData.js)
+ *
+ * This is a design/organizational thing. Your code itself looks good!
+ *
+ * The BootstrapTableView.js and BootstrapTable1.js tables are extremely specific to the ViewData component.
+ * You're (probably) not going to reuse them anywhere outside of the ViewData component.
+ * Therefore, they don't need to be a stand-alone component as you have them here.
+ * Thus, it'd be best to move BootstrapTableView.js and BootstrapTable1.js into the components/ViewData directory.
+ * Then, at the top of ViewData/index.js, you can import them.
+ *
+ * Let me know if that makes sense! Holla if you need further explanation.
+ *
+ * --Vy
+ */
+
 /**
  * Created by shraddha on 2/8/17.
  */
