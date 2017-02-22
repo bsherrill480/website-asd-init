@@ -31,6 +31,10 @@ import ListGroup from 'react-bootstrap/lib/ListGroup';
 import ListGroupItem from 'react-bootstrap/lib/ListGroupItem';
 
 export default class ViewData extends React.Component{
+
+  /*
+   * Delete the constructor. (See note in components/BootstrapTable/BootstrapTable1.js)
+   */
   constructor()
   {
     super();

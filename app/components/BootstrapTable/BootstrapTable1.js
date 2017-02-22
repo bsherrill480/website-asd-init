@@ -21,6 +21,22 @@ import React from 'react';
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 
 export default class BootstrapTable1 extends React.Component{
+
+  /*
+   * In our react-boilerplate way of doing things, we shouldn't be using a constructor in a component.
+   * The component should get all its information from somewhere else. So, you don't need
+   * a constructor to set any properties on the component.
+   *
+   * On a side note, if you want to give your containers props, here's how you do it:
+   *    mapDispatchToProps: this will allow you to connect actions to your container's properties.
+   *    mapStateToProps: this will allow you to connect your store's properties to your container's properties.
+   * Check out HomePage/index.js for an example on how this is done.
+   *
+   * Also, please ask me if you'd like a code walk of how this works, I'd be happy to do it.
+   * This was super hard for me to understand, Brian had to give me a lot of tutoring!
+   *
+   * Basically: you can delete any constructors from your components/containers.
+   */
   constructor()
   {
     super();

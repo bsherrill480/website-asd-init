@@ -23,6 +23,10 @@ import React from 'react';
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 
 export default class BootstrapTableViewData extends React.Component{
+
+  /*
+   * Delete the constructor. (See note in components/BootstrapTable/BootstrapTable1.js)
+   */
   constructor()
   {
     super();
