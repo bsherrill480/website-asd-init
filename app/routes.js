@@ -39,7 +39,7 @@ export default function createRoutes(store) {
     //     importModules.catch(errorLoading);
     //   },
     // },
-     {
+    {
       path: '/profile',
       name: 'profile',
       getComponent(nextState, cb) {
@@ -148,10 +148,10 @@ export default function createRoutes(store) {
           name: 'profile',
           getComponent(nextState, cb) {
             const importModules = Promise.all([
-            import('containers/ProfilePage/reducer'),
-            import('containers/ProfilePage/sagas'),
-            import('containers/ProfilePage'),
-          ]);
+              import('containers/ProfilePage/reducer'),
+              import('containers/ProfilePage/sagas'),
+              import('containers/ProfilePage'),
+            ]);
 
             const renderRoute = loadModule(cb);
 
@@ -247,8 +247,6 @@ export default function createRoutes(store) {
         // import('containers/ProjectPage')
         //   .then(loadModule(cb))
         //   .catch(errorLoading);
-
-      },
     },{
       path: '/viewData',
       name: 'view data',
@@ -256,6 +254,26 @@ export default function createRoutes(store) {
         import('containers/ViewDataPage')
           .then(loadModule(cb))
           .catch(errorLoading);
+      },
+    }, {
+      path: '/verify',
+      name: 'verifyAccount',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          import('containers/VerifyAccount/reducer'),
+          import('containers/VerifyAccount/sagas'),
+          import('containers/VerifyAccount'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([reducer, sagas, component]) => {
+          injectReducer('verifyAccount', reducer.default);
+          injectSagas(sagas.default);
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
       },
     }, {
       path: '*',
