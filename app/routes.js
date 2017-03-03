@@ -247,7 +247,8 @@ export default function createRoutes(store) {
         // import('containers/ProjectPage')
         //   .then(loadModule(cb))
         //   .catch(errorLoading);
-    },{
+      },
+    }, {
       path: '/viewData',
       name: 'view data',
       getComponent(nextState, cb) {
